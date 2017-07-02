@@ -1,0 +1,344 @@
+body {
+	background-color: #222c31 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	font-size: 14px !important;
+	font-family: "Open Sans",sans-serif !important;
+}
+
+.admin-panel {
+	width: 100%;
+	height: 580px;
+	max-width:980px;
+	margin: 50px auto;
+	overflow: hidden;
+	background-color:#fff;
+	position:relative;
+}
+
+.slidebar {
+	width:15%;
+	height: 580px;
+	float: left;
+	background-color: #111;
+}
+.slidebar ul {
+	position:relative;
+	height:100%;
+}
+
+.slidebar a{
+	color: #bbb;
+	text-decoration:none;
+}
+.slidebar li{
+	text-align:center;
+	padding: 0px 0px;
+	border-bottom: 1px solid #bbb;
+}
+
+ul {
+	padding: 0;
+	margin:0;
+}
+li {
+	list-style-type: none;
+	margin: 0;
+	position: relative;
+	text-align:center;
+	color:#B3B3B3
+}
+.slidebar i {
+  display:block;
+  text-align:center;
+  color:#B3B3B3;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.slidebar ul a {
+	color:#B3B3B3;
+	text-decoration: none;
+	box-sizing:border-box;
+	display: block;
+	text-transform: capitalize;
+	padding: 20px;
+	-webkit-transform: scale(1);
+	-webkit-transition: -webkit-transform 1s cubic-bezier(0, 0, .2, 1);
+}
+.slidebar ul a:hover{
+	-webkit-transform: scale(1.05);
+	-webkit-transition: -webkit-transform 1s cubic-bezier(0, 0, .2, 1);
+}
+.slidebar li:hover a, li#active{
+	background-color: #313131;
+}
+.slidebar li:hover i, li#active i{
+	color: #00bfa5;
+}
+.slidebar li:focus i {
+	color: #00bfa5;
+}
+
+.main {
+	float: left;
+	width: 85%;
+	background-color: rgb(255,255,255);
+	position: relative;
+}
+
+.main h2 {
+	margin:1em 30px;
+	color: #111111;
+	font-size: 22px;
+	font-weight:600;
+	border-bottom: 1px solid #bbb;
+	padding: 0px 0px 20px 0px;
+}
+
+/* ========================
+	        CURSOS 
+   ======================== */
+
+/* ------------------- */
+/*   Panel busquedas   */
+/* ------------------- */
+
+.menu {
+	width: 100%;
+    max-width: 980px;
+    margin: 50px auto -50px auto;
+    overflow: hidden;
+    background-color: #00bfa5;
+    position: relative;
+    height: 65px;
+    border-radius: 3px 3px 0px 0px;
+	-moz-border-radius: 3px 3px 0px 0px;
+	-webkit-border-radius: 3px 3px 0px 0px;
+	border: 0px solid #000000;
+}
+
+.menu h1{
+	margin: 0.6em 0px 0.6em 0px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    /* border-bottom: 1px solid #bbb; */
+    padding: 0px 0px 20px 0px;
+    display: inline;
+    width: 28%;
+    float: left;
+}
+
+.menu i {
+    display: inline;
+    float: left;
+    color: #ffffff;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-left: 37%;
+    /* margin-right: 15px; */
+    width: 9%;
+}
+
+.menu p {
+	display: none;
+    float: left;
+    width: 26%;
+    margin: 0em 0px 1.6em 0px;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 23px 0px 23px 7px;
+    background: linear-gradient(to right, #00bfa5 , rgba(34, 44, 49, 0.58));
+    font.font-weight: 500;
+    /* border-top: 1px solid #ffffff; */
+    /* border-right: 1px solid #bbb; */
+}
+
+.panel_input_busqueda{
+	margin: 1em 30px;
+}
+
+.form-inline{
+	margin: 1em 30px;
+}
+
+.input_busqueda{
+	font-size: 16px;
+}
+
+.tabla_busquedas{
+    margin: 3em 30px 1em 30px;
+    cursor: pointer;
+}
+
+#lupa{
+	margin-right: 5px;
+}
+
+.nav_busqueda{
+	text-align: center;
+}
+
+#mi_imagen{
+	width: 100%;
+}
+
+.titular_modal{
+	text-decoration: underline;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#ultima_vacante{
+	background-color: rgba(255, 247, 0, 0.4);
+}
+
+#not_vacante{
+	background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* ========================
+	       USUARIOS 
+   ======================== */
+
+/* ------------------- */
+/*     Panel login     */
+/* ------------------- */
+
+#boton_login{
+	margin: 1em 30px;
+}
+
+.form-horizontal{
+	margin: 1em 50% 1em 45px;
+}
+
+#panel_login input{
+	font-size: 14px;
+}
+
+#panel_login label{
+	font-size: 16px;
+}
+
+#icon_login{
+	margin-right: 5px;
+}
+
+#crear_cuenta{
+	display: inline;
+    font-size: 16px;
+    cursor: pointer;
+    color: #337ab7;
+}
+
+#crear_cuenta:hover{
+	border-bottom: 1px solid #00bfa5;
+}
+
+.error {
+	border: #f00 solid 1px !important;
+    -webkit-box-shadow: 0px 2px 30px 0px rgba(255,0,0,0.7) !important;
+    -moz-box-shadow: 0px 2px 30px 0px rgba(255,0,0,0.7) !important;
+    box-shadow: 0px 2px 10px 0px rgba(255,0,0,0.7) !important;
+}
+
+/* ------------------- */
+/*    Panel registro   */
+/* ------------------- */
+
+
+#panel_registro input{
+	font-size: 14px;
+}
+
+#panel_registro label{
+	font-size: 16px;
+}
+
+#boton_nuevo_usuario{
+	margin: 1em 30px;
+}
+
+.form-horizontal_regis{
+	margin: 1em 9% 1em 32px;
+}
+
+#icon_regis{
+	margin-right: 5px;
+}
+
+#volver_login{
+	display: inline;
+    font-size: 16px;
+    cursor: pointer;
+    color: #337ab7;
+}
+
+#volver_login:hover{
+	border-bottom: 1px solid #00bfa5;
+}
+
+#label_sexo{
+	margin-left: 2%;
+}
+
+/* ------------------------ */
+/*    Panel mostrar cursos  */
+/* ------------------------ */
+
+#tab3{
+	overflow: auto;
+	height: 580px;
+}
+
+.tabla_proximos_cursos{
+    margin: 3em 30px 1em 30px;
+    cursor: pointer;
+}
+
+.tabla_cursos_realizados{
+    margin: 3em 30px 1em 30px;
+    cursor: pointer;
+}
+
+.mensaje_gestor{
+	margin: 0px 2em 0px 2em;
+}
+
+/* AGENDA */
+.calendario{
+    margin: 3em 30px 1em 30px;
+    cursor: pointer;
+}
+.contiene{
+	width: 15%;
+    background-color: rgba(0, 191, 165, 0.45);
+    border-radius: 5px;
+}
+
+.botonera{
+	margin: -30px 0px 8px 0px;
+}
+
+.botonera button:last-child{
+	float: right;
+}
+
+#label_periodo{
+	display: inline;
+    margin-left: 16.5%;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.table>tbody>tr>th{
+    border: 1px solid #ddd !important;
+}
+
+.table>tbody>tr>td{
+    border: 1px solid #ddd !important;
+}
+

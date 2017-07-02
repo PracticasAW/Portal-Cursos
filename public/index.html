@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bienvenido al gestor de cursos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery/jquery-3.1.1.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/underscorejs.js" type="text/javascript"></script>
+        
+
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+                            <!-- Alertas -->
+        <link rel="stylesheet" href="css/alertify.core.css" />
+        <link rel="stylesheet" href="css/alertify.default.css" />
+        <script src="js/alertify/alertify.js" type="text/javascript"></script>
+ 
+
+    </head>
+    <body>
+        <div class="menu">
+            <i class="fa fa-graduation-cap"></i><h1>Portal de cursos</h1>
+            <p>  </p>
+        </div>
+        <div class="admin-panel">
+            <div class="slidebar">
+                <ul>
+                    <li class="tab1"><a href="" name="tab1"><i class="fa fa-search"></i>Buscar</a></li>
+                    <li class="tab2"><a href="" name="tab2"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+                    <li class="tab3"><a href="" name="tab3"><i class="fa fa-calendar" aria-hidden="true"></i>Mostrar cursos</a></li>
+                    <li class="tab4"><a href="" name="tab4"><i class="fa fa-power-off" aria-hidden="true"></i>Sign out</a></li>
+                    <!--<li><a href="" name="tab3"><i class="fa fa-pencil"></i>Typography</a></li>
+                    <li><a href="" name="tab4"><i class="fa fa-picture-o"></i>Portfolio</a></li>
+                    <li><a href="" name="tab5"><i class="fa fa-file-video-o"></i>Blog / News</a></li>
+                    <li><a href="" name="tab6"><i class="fa fa-wrench"></i>Advanced</a></li>-->
+                </ul>
+            </div>
+          
+            <div class="main">
+                <div id="tab1">
+                    <h2 class="header">Busqueda de cursos:</h2>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label class="input_busqueda" for="exampleInputName2" >Busqueda por nombre</label>
+                            <input type="text" class="form-control" id="contenido_busqueda" autofocus>
+                        </div>
+                        <button id="boton_busqueda" type="submit" class="btn btn-primary"><span id="lupa" class="glyphicon glyphicon-search"></span>Buscar</button>
+                    </div> 
+                    <div class="tabla_busquedas">
+                        <table class="table table-hover">
+                            <tr><th>Nombre</th><th>Lugar</th><th>Inicio</th><th>fin</th><th>vacantes</th></tr>
+                        </table>
+                        <nav class="nav_busqueda" aria-label="resultado_busqueda">
+                            <ul class="pagination"> 
+                                <li id="antes">
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                    </a>
+                                </li> 
+                                
+                                <!--<li>
+                                    <a class="num_pagination" href="#" data-num="2">2</a>
+                                </li>--> 
+                                <li id="despues">
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div id="tab2">
+                    <div id="panel_login">
+                        <h2 class="header">Login:</h2>
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="input_direccion" >Dirección de correo: </label>
+                                <input type="text" class="form-control" id="direccion_login">
+                            </div>
+                            <div class="form-group">
+                                <label class="input_password" >Contraseña: </label>
+                                <input type="password" class="form-control" id="password_login">
+                            </div>
+                        </div> 
+                        <button id="boton_login" type="submit" class="btn btn-primary"><span id="icon_login" class="glyphicon glyphicon-user"></span>Identificarse</button>
+                        <p id="crear_cuenta">Crear nueva cuenta</p>
+                    </div>
+                    <div id="panel_registro">
+                        <h2 class="header">Nuevo usuario:</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-horizontal_regis">
+                                    <div class="form-group">
+                                        <label class="input_reg_email" >Dirección de correo: </label>
+                                        <input type="text" class="form-control" id="reg_email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="input_reg_password" >Contraseña: </label>
+                                        <input type="password" class="form-control" id="reg_password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="input_reg_sexo" >Sexo: </label><br>
+                                        <input id="reg_sexo" value='Hombre' type="radio" name="reg_sexo" checked><label id="label_sexo">Hombre</label><br>
+                                        <input id="reg_sexo" value='Mujer' type="radio" name="reg_sexo"><label id="label_sexo">Mujer</label>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-horizontal_regis">
+                                    <div class="form-group">
+                                        <label class="input_reg_nombre" >Nombre: </label>
+                                        <input type="text" class="form-control" id="reg_nombre">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="input_reg_apellidos" >Apellidos: </label>
+                                        <input type="text" class="form-control" id="reg_apellidos">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="input_reg_fecha_nacimiento" >Fecha_nacimiento: </label>
+                                        <input type="date" class="form-control" id="reg_fecha_nacimiento">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="boton_nuevo_usuario" type="submit" class="btn btn-primary"><span id="icon_regis" class="glyphicon glyphicon-user"></span>Crear nuevo usuario</button>
+                        <p id="volver_login">Volver a login</p>
+                    </div>
+                </div>
+                <div id="tab3">
+                    <h2 class="header">Próximos cursos</h2>
+                    <div class="tabla_proximos_cursos">
+                        <table class="table table-hover">
+                            <tr><th>Nombre</th><th>Lugar</th><th>Inicio</th><th>fin</th></tr>
+                        </table>
+                    </div>
+                    <h2 class="header">Cursos realizados o realizando</h2>
+                    <div class="tabla_cursos_realizados">
+                        <table class="table table-hover">
+                            <tr><th>Nombre</th><th>Lugar</th><th>Inicio</th><th>fin</th></tr>
+                        </table>
+                    </div>
+                    <h2 class="header">Tu horario</h2>
+                    <div class="calendario">
+                        <div class="botonera">
+                            <button id="boton_anterior" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Semana anterior</button>
+                            <p id="label_periodo"></p>
+                            <button id="boton_siguiente" class="btn btn-primary">Semana siguiente <span class="glyphicon glyphicon-arrow-right"></span> </button>
+                        </div>
+                        <table class="table table-hover">
+                            <tr>
+                                <th>Hora</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miércoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                                <th>Sabado</th>
+                                <th>Domingo</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- <div id="tab3"><h2 class="header">Typography</h2></div>
+                 <div id="tab4"><h2 class="header">Portfolio</h2></div>
+                 <div id="tab5"><h2 class="header">Blog /news</h2></div>
+                 <div< id="tab6"><h2 class="header">Advanced</h2></div>  -->
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p id="descripcion_curso"></p>
+                        </div>
+                        <div id="imagen_curso" class="col-md-3">
+                            
+                        </div>
+                        <div class="col-md-12">
+                            <p class="titular_modal">Lugar de impartición:</p>
+                            <p id="lugar_imparticion"></p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="titular_modal">Ciudad:</p>
+                            <p id="ciudad"></p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="titular_modal">Duración:</p>
+                            <p id="duracion"></p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="titular_modal">Horario:</p>
+                            <p id="horario"></p>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="titular_modal">Número de plazas:</p>
+                            <p id="num_plazas"></p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button id='boton_inscribirse' type="button" class="btn btn-primary">Inscribirse</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>

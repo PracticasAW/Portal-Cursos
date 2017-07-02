@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Panel pruebas backend - Gestor cursos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery/jquery-3.1.1.min.js"></script>
+        <script src="js/cursos.js"></script>
+    </head>
+    <body>
+        <a href="index2.html"> ir a gestor de usuarios </a><br><br><a href="dashboard.html"> Ir a Diseño top </a>
+        <br><br>
+        <hr color="green" size=1 width="full">
+        <br><br>
+        <p>
+            Introduce ID de curso a buscar:
+            <input type="text" id="id" style="width:5em">
+            <button id="Buscar">Buscar por id</button>
+            <br>
+            <hr color="green" size=1 width="full">
+            <br>
+            Contiene en el título:
+            <input type="text" id="busqueda" style="width:5em">
+            <br><br>
+            Introduce un limite:
+            <input type="text" id="limite" style="width:5em">
+            <br><br>
+            Introduce desde que posicion:
+            <input type="text" id="posicion" style="width:5em">
+            <br>
+            <button id="Buscar_2">Buscar por nombre</button>
+        </p>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+            Introduce titulo:
+            <input type="text" id="titulo">
+            <br><br>
+            Introduce una descripción:
+            <textarea id="descripcion" rows="4" cols="50"></textarea>
+            <br><br>
+            Introduce localidad:
+            <input type="text" id="localidad">
+            <br><br>
+            Introduce dirección:
+            <input type="text" id="direccion">
+            <br><br>
+            Introduce plazas_disp:
+            <input type="number" id="plazas_disp">
+            <br><br>
+            Fecha_inicio:
+            <input type="date" id="fecha_ini">
+            <br><br>
+            Fecha_fin:
+            <input type="date" id="fecha_fin">
+            <br><br>
+            Hora inicio
+            <input type="time" id="hora_inicio_1">
+            Hora fin:
+            <input type="time" id="hora_inicio_2">
+            Día de la semana:
+            <input type="text" id="dia_1">
+            <br><br>
+            Hora inicio
+            <input type="time" id="hora_inicio_3">
+            Hora fin:
+            <input type="time" id="hora_inicio_4">
+            Día de la semana:
+            <input type="text" id="dia_2">
+            <br><br>
+            <br><br>
+            <button id="insertar">Insertar curso</button> - ID Modificacion:<input type="text" id="id_modi" style="width:5em"><button id="modificar">Modificar</button>
+            <br>
+            <hr color="green" size=1 width="full">
+            <br><br>
+            <form action="http://localhost:3000/cursos/subirImagenCurso/1" method="post" enctype="multipart/form-data">
+            ID Curso para imagen:
+            <input type="text" id="id_foto" style="width:5em">
+            <br><br>
+            Imagen:
+            <input id="foto" type="file" name="foto" />
+            <br><br>
+            <input type="hidden" name="_method" value="put">
+            <button type="submit">subir</button>
+            <br><br>
+            </form>
+
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        <p id="resultado">
+            Resultado: <span id="resultadoFrom"></span>
+        </p>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        ID a eliminar:
+        <input type="number" id="id_eliminar">
+        <br><br>
+        <button id="eliminar">Eliminar curso</button>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+
+    </body>
+</html>

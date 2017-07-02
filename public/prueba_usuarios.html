@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Panel pruebas backend - Gestor usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery/jquery-3.1.1.min.js"></script>
+        <script src="js/usuarios.js"></script>
+    </head>
+    <body>
+        <h2> Insercción de un usuario</h2>
+        <p>
+            Nombre:
+            <input type="text" id="nombre" autofocus="true"><br><br>
+            Apellidos:
+            <input type="text" id="apellidos"><br><br>
+            sexo:<br><br>
+            <input id="sexo" type="radio" name="sexo" value="hombre" checked> Hombre<br><br>
+            <input id="sexo" type="radio" name="sexo" value="mujer"> Mujer<br><br>
+            Fecha de nacimiento:
+            <input id="fecha_nacimiento" type="date" name="fecha_nacimiento"><br><br>
+            email:
+            <input id="email" type="email" name="email"><br><br>
+            password:
+            <input id="password" type="password" name="password"><br><br>
+            <button id="insertarUser">Insertar usuario</button>
+        </p>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        <H2>login</H2>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        Email:
+        <input id="user" type="text" name="user"><br><br>
+        Contraseña:
+        <input id="pass" type="password" name="pass"><br><br>
+        <button id="login">Login</button>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        <p id="resultado">
+            Resultado: <span id="resultadoFrom"></span>
+        </p>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        <H2>Insertar curso a usuario</H2>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        id:
+        <input id="id_curso_inscripcion" type="number" name="id_curso_inscripcion"><br><br>
+        <button id="insertUserToCurso">Inscribirse en el curso</button>
+        <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        <p id="resultado">
+            Resultado: <span id="resultadoFrom_2"></span>
+        </p>
+         <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        <H2>Dame los cursos a los que me he inscrito</H2>
+         <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        <button id="cursosInscrito">Dame los cursos en los que estoy inscrito</button>
+         <br>
+        <hr color="green" size=1 width="full">
+        <br>
+        <ol id="resultadoFrom_3">
+        </ol>
+    </body>
+</html>
